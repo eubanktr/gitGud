@@ -21,5 +21,5 @@ const ratings = [
   },
 ]
 
-const seedRatings = () => bulkCreate(ratings)
+const seedRatings = () => Ratings.bulkCreate(ratings)
 module.exports = seedRatings
