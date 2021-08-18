@@ -6,10 +6,10 @@ const seedSystems = require('./systems-seeds')
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
-    await seedGames();
+    await seedSystems();
     await seedUsers();
     await seedRatings();
-    await seedSystems();
+    await seedGames();
     process.exit(0);
 };
 

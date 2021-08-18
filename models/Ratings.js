@@ -6,12 +6,6 @@ class Ratings extends Model {}
 
 Ratings.init(
     {
-    id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey:true,
-    autoIncrement: true,
-    },
     rating_letter: {
     type: DataTypes.STRING,
     allowNull: false,

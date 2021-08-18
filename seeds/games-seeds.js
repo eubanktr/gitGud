@@ -15,7 +15,7 @@ const gameData = [
   },
   {
     game_title: 'Rainbow Six: Siege',
-    ratings_id: 3
+    ratings_id: 4
   }
 ]
 
