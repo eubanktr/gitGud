@@ -14,16 +14,16 @@ const PORT = process.env.PORT || 3001;
 
 // const hbs = exphbs.create({ helpers });
 
-// const sess = {
-//   secret: 'User session',
-//   cookie: {},
-//   resave: false,
-//   saveUnititialized: true,
-//   store: new SequilizeStore({
-//     db: sequelize
-//   })
-// };
-
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUnititialized: true,
+  store: new SequilizeStore({
+    db: sequelize
+  })
+};
+app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, 'public')));
