@@ -3,7 +3,7 @@ const { Games } = require('../models')
 const gameData = [
   {
     game_title: 'Apex Legends',
-    ratings_id: 4
+    ratings_id: 3
   },
   {
     game_title: 'Call of Duty Warzone',
