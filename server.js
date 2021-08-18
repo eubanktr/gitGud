@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const express = require('express');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -17,11 +17,11 @@ const PORT = process.env.PORT || 3001;
 // const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.SESS_PW, 
   cookie: {},
   resave: false,
   saveUnititialized: true,
-  store: new SequilizeStore({
+  store: new SequelizeStore({
     db: sequelize
   })
 };

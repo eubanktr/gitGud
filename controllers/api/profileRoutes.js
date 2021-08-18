@@ -2,20 +2,16 @@ const router = require('express').Router();
 const { Users } = require('../../models');
 
 
-router.put('/:id', async (req, res) =>{
-    try {
-        const userTags = await Users.update({
-            gamertag: req.body.gamertag,
-            psn: req.body.psn,
-            steamId: req.body.steamId,
-            system_id: req.body.system_id,
-        },
+router.put('/', async (req, res) =>{
+      console.log(req.session);
+      console.log(req.session.user_id);
+      try {
+        const userTags = await Users.update(req.body,
         {
             where: {
                 id: req.session.user_id
             },
-        }
-        )
+        })
         
         res.status(200).json(userTags);
     } catch (err) {
@@ -23,3 +19,4 @@ router.put('/:id', async (req, res) =>{
     }
 });
 
+module.exports = router;
