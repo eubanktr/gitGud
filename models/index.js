@@ -3,12 +3,13 @@ const Systems = require('./Systems')
 const Ratings = require('./Ratings')
 const Users = require('./Users')
 
-// Ratings.belongsTo(Games, {
-//     foreignKey: 'games_id'
-// })
 
-// Users.hasMany(Systems, {
-//     foreignKey: 'systems_id'
+
+// Games.hasOne(Ratings, {
+//     foreignKey: 'ratings_id'
+// })
+// Ratings.belongsTo(Games, {
+//     foreignKey: 'ratings_id'
 // })
 
 // Users.hasMany(Games, {
