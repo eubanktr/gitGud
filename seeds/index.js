@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection')
-const seedGames = require('./gameData')
-const seedUsers = require('./userData')
-const seedRatings = require('./ratings')
-const seedSystems = require('./systemData')
+const seedGames = require('./games-seeds')
+const seedUsers = require('./users-seeds')
+const seedRatings = require('./ratings-seeds')
+const seedSystems = require('./systems-seeds')
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
