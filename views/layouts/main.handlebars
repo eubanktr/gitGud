@@ -23,7 +23,7 @@
           <!-- Conditionally render login or logout links -->
           <li><a href="/">Home</a></li>
           {{#if logged_in}}
-          <li><a href="/profile">Profile</a> |<button class="no-button" id="logout">logout</button></li>
+          <li><a href="/profile">Profile</a></li>|<button class="no-button" id="logout">logout</button>
           {{else}}
           <li><a href="/login">Login/Register</a></li>
           {{/if}}
