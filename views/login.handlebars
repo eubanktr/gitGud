@@ -1,42 +1,62 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LFG</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-</div>
+<body>
+    <div class="custom-container">
+        <h1 class="text-center m-4 text-success">LFG</h1>
+        <div class="jumbotron">
+            <h3 class="text-center text-primary">Login Form</h3>
+            <br>
+            {{#if success}}
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong>{{success}}</strong>
+                <button class="close" data-dismiss="alert"><span>&times;</span></button>
+            </div>
+            {{/if}}
+            {{#if error}}
+            <div class="alert alert-danger alert-dismissible fade show">
+                <strong>{{error}}</strong>
+                <button class="close" data-dismiss="alert"><span>&times;</span></button>
+            </div>
+            {{/if}}
 
-<script src="../public/js/login.js"></script>
+            <form action="" id="login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="username" id="email" placeholder="Enter your email id">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter Your Password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-info btn-block">
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-8">
+                            New user? Register <a href="/register">here</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+    setTimeout(() => {
+        $('.alert').remove();
+    }, 3000)
+</script>
+</html>
