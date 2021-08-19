@@ -7,14 +7,14 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const bcrypt = require('bcrypt');
 const db = require('./models')
-// const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: process.env.SESS_PW, 
@@ -25,6 +25,10 @@ const sess = {
     db: sequelize
   })
 };
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
 app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
