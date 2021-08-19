@@ -1,12 +1,22 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) =>{
-    res.render('homepage');
+    res.render('layouts/main');
 })
 
-
+router.get('/profile', withAuth, async (req, res) => {
+    try {
+    //   const userData = await User.findByPk(req.session.user_id, {
+    //     attributes: { exclude: ['password'] },
+    //   });
+    //   const user = userData.get({ plain: true });
+      res.render('profile');
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 router.get('/login', (req, res) => {
-    // If a session exists, redirect the request to the homepage
     if (req.session.logged_in) {
         res.redirect('/');
         return;
