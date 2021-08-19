@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { Users } = require('../../models');
 
+router.get('/profile', async (req, res) => {
+    res.render('profile')
+})
 
 router.put('/', async (req, res) =>{
       console.log(req.session);
