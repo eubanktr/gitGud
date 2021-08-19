@@ -30,5 +30,5 @@ const userData = [
         system_id: 1
     },
 ]
-const seedUserData = () => Users.bulkCreate(userData)
+const seedUserData = () => Users.bulkCreate(userData, {individualHooks: true, returning: true})
 module.exports = seedUserData
