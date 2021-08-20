@@ -2,13 +2,13 @@ const registerForm = async (event) => {
 
   event.preventDefault();
 
-  const newUser = document.querySelector('#newUser').value.trim(); // @@ form needs a newUser id
-  const userPw = document.querySelector('#newPw').value.trim(); // @@ form needs a newPw id
-  const userName = document.querySelector('#userName').value.trim(); // @@ form needs a userName id
-  const userAge = document.querySelector('#userAge').value.trim(); // @@ form needs a userAge id
-  const userSys = document.querySelector('#userSys').value.trim(); // @@ form needs a userSys id
+  const newUser = document.getElementById('newUser').value.trim(); // @@ form needs a newUser id
+  const userPw = document.getElementById('newPw').value.trim(); // @@ form needs a newPw id
+  const userName = document.getElementById('userName').value.trim(); // @@ form needs a userName id
+  const userAge = document.getElementById('userAge').value.trim(); // @@ form needs a userAge id
+  const userSys = document.getElementById('userSys').value.trim(); // @@ form needs a userSys id
 
-  if (newUser && userPw && userAge && userSys) {
+  if (newUser && userPw && userName && userAge && userSys) {
                                   // @@ check route below
     const response = await fetch(`/api/users/register`, {
       method: 'POST', // @@ could be PUT ???
@@ -26,4 +26,4 @@ const registerForm = async (event) => {
   }
 };
 
-document.querySelector('.register').addEventListener('sumbit', registerForm); // @@ register card/page needs a register class
+document.querySelector('.newRegist').addEventListener('sumbit', registerForm); // @@ register card/page needs a register class
