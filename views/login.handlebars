@@ -19,12 +19,42 @@
         <br><br>    
         <span>Remember me</span>    
         <br><br>    
+    </form>
+
+              <!--  ADDED @@ DELETE IF BROKEN -->
+
+    <form>
+      <h2>New user? Register Below</h2>
+      <div class='register'>
+        <form id='registration' method='POST'>
+          <label>Email: </label>
+          <input type="text" id="newUser" placeholder="example@example.com">
+          <br>
+          <label>Password: </label> <span>Must be atleast 6 characters/digits</span>
+          <input type="Password" class="password" id="newPw" placeholder="Enter a password">
+          <br>
+          <label>Username: </label>
+          <input type="text" id="userName" placeholder="Enter a username">
+          <br>
+          <label>Enter your age: </label>
+          <input type="number" id="userAge" placeholder="Numbers only">
+          <br>
+          <label>What system do you play?</label> <span>You must enter a number between 1 and 3</span>
+          <input type="number" id="userSys" placeholder="1-Xbox 2-Playstation 3-PC">
+          <br>
+          <div class="newRegist">
+                    <input type="submit" value="Register" class="btn btn-info btn-block">
+                </div> 
+        </form>
+
+
+
+      </div>
     </form>     
 </div>  
 
 <script src='js/login.js'></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script>
 </body>    
 
