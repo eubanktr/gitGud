@@ -2,6 +2,7 @@ const Games = require('./Games')
 const Systems = require('./Systems')
 const Ratings = require('./Ratings')
 const Users = require('./Users')
+const Posts = require('./Posts')
 
 
 
@@ -23,4 +24,4 @@ const Users = require('./Users')
 //     foreignKey: 'systems_id'
 // })
 
-module.exports = { Games, Systems, Ratings, Users }
+module.exports = { Games, Systems, Ratings, Users, Posts }
