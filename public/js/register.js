@@ -26,8 +26,4 @@ const registerForm = async (event) => {
   }
 };
 
-<<<<<<< HEAD
-document.querySelector('.register').addEventListener('sumbit', registerForm); // @@ register card/page needs a register class
-=======
 document.querySelector('.register').addEventListener('submit', registerForm); // @@ register card/page needs a register class
->>>>>>> dbd78d5a2a5607ef5b71c2bd542d77313625873a

@@ -21,11 +21,12 @@
         <br><br>    
     </form>
     </div>
-
               <!--  ADDED @@ DELETE IF BROKEN -->
+
+    <form>
       <h2>New user? Register Below</h2>
       <div class='register'>
-        <form id='registration'>
+        <form id='registration' method='POST'>
           <label>Email: </label>
           <input type="text" id="newUser" placeholder="example@example.com">
           <br>
@@ -45,9 +46,13 @@
                     <input type="submit" value="Register" class="btn btn-info btn-block">
                 </div> 
         </form>
-        </div>   
+        </div>
+
+
+      </div>
+    </form>     
 </div>  
-<script src='js/register.js'></script>
+
 <script src='js/login.js'></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
