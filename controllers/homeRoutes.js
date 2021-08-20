@@ -2,7 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) =>{
-    res.render('layouts/main');
+    res.render('home');
 })
 
 router.get('/profile', withAuth, async (req, res) => {
