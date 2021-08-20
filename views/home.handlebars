@@ -1,19 +1,4 @@
   <div class="flex-column justify-space-around">
-  <nav>
-    <div class="nav-wrapper">
-      <h1 class="brand-logo">Welcome to GitGud!</h1>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <!-- Conditionally render login or logout links -->
-          <li><a href="/">Home</a></li>
-          {{#if logged_in}}
-          <li><a href="/profile">Profile</a></li>|<button class="no-button" id="logout">logout</button>
-          {{else}}
-          <li><a href="/login">Login/Register</a></li>
-          {{/if}}
-        </ul>
-    </div>
-  </nav>
-    </header>
     <main class="container container-fluid mt-5">
       <div class="greeting">
         <p class="greeting-message">Here you can meet and group with people to play your favorite competitive games. <br>
