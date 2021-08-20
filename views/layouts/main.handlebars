@@ -10,6 +10,7 @@
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link type="text/css" rel="stylesheet" href="/css/style.css">
+  
 </head>
 
 <body>
@@ -21,7 +22,8 @@
           <!-- Conditionally render login or logout links -->
           <li><a href="/">Home</a></li>
           {{#if logged_in}}
-          <li><a href="/profile">Profile</a></li>|<button class="no-button" id="logout">logout</button>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/logout">Logout</a></li>
           {{else}}
           <li><a href="/login">Login/Register</a></li>
           {{/if}}
