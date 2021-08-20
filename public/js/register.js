@@ -26,4 +26,4 @@ const registerForm = async (event) => {
   }
 };
 
-document.querySelector('.newRegist').addEventListener('sumbit', registerForm); // @@ register card/page needs a register class
+document.querySelector('.register').addEventListener('sumbit', registerForm); // @@ register card/page needs a register class
