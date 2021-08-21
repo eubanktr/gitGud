@@ -29,12 +29,12 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', async (req, res) => {
     
   console.log(req.session.user_id);
 
   if (req.session.logged_in) {
-    req.session.destroy(() => {
+    await req.session.destroy(() => {
       res.status(204).end();
     });
     res.redirect('/');

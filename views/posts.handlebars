@@ -1,28 +1,140 @@
 
-<div class="top-bar">
-  <h1>
-  {{game}} </h1>
-</div>
-<br>
-<div>
-
-
+<div class="greeting">
+  <h1 class="greeting-message">Apex Legends</h1>
 </div>
 
 
 
+<div id="left-nav">
+<a class="waves-effect waves-light btn right">Find Others and GG</a>
 
+  <h3>People looking for gamers playing this game:<br>
 
+  <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>PlayStation 5</a>
 
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">Player 1</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 2</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 3</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 4</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 5</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 6</a></li>
+    <li class="divider" tabindex="-1"></li>
+  </ul>
+  
 
-<div id="mydata">
-  <h2>People looking for gamers playing this game:</h2>
-<table id="myTableData"  border="1" cellpadding="2">
-    <tr>
-        
-        <td><b>Gamertag</b></td>
-        <td><b>System</b></td>
-    </tr>
-</table>
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Xbox</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown2' class='dropdown-content'>
+    <li><a href="#!">Player 1</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 2</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 3</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 4</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 5</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 6</a></li>
+    <li class="divider" tabindex="-1"></li>
+  </ul>
+
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Steam</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown3' class='dropdown-content'>
+    <li><a href="#!">Player 1</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 2</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 3</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 4</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 5</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Player 6</a></li>
+    <li class="divider" tabindex="-1"></li>
+  </ul>
+</h3>
 </div>
 
+<section class="flex-parent">
+
+<div class="posts-section">
+  <div class="posts post-1">
+    <h3>Title</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, harum. Porro minus expedita deserunt officiis aut eius illo repellat cum sapiente, aperiam a eaque enim harum exercitationem quae natus asperiores!</p>
+  </div>
+
+  <div class="posts post-2">
+    <h3>Title</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, harum. Porro minus expedita deserunt officiis aut eius illo repellat cum sapiente, aperiam a eaque enim harum exercitationem quae natus asperiores!</p>
+  </div>
+
+  <div class="posts post-3">
+    <h3>Title</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, harum. Porro minus expedita deserunt officiis aut eius illo repellat cum sapiente, aperiam a eaque enim harum exercitationem quae natus asperiores!</p>
+  </div>
+
+</div>
+
+
+<ul id="slide-out" class="sidenav">
+
+<div class="create-posts">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email_inline" type="email" class="validate">
+            <label for="email_inline">Email</label>
+            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect waves-light btn">Create Post!</a>
+</section>
