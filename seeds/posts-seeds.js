@@ -19,7 +19,7 @@ const postData = [
   {
     author: 'SteveHenny',
     game: 'Rainbow Six Seige',
-    body: `Let's clap some cheeks`
+    body: `Let's bang some drums`
   }
 ]
 const seedPosts = () => Posts.bulkCreate(postData) // {individualHooks: true, returning: true}
