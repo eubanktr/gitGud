@@ -1,9 +1,9 @@
 const postForm = async (event) => {
   event.preventDefault();
 
-  const author = document.getElementById('@@').value.trim();
-  const game = document.getElementById('@@').value.trim();
-  const body = document.getElementById('@@').value.trim();
+  const author = document.getElementById('author').value.trim();
+  const game = document.getElementById('game').value.trim();
+  const body = document.getElementById('body').value.trim();
 
   if (author && game && body) {
     const response = await fetch(`/api/posts/`, {
@@ -21,4 +21,4 @@ const postForm = async (event) => {
   }
 };
 
-document.getElementById('post').addEventListener('click', postForm);
+document.querySelector('.post').addEventListener('submit', postForm);
