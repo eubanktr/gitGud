@@ -48,13 +48,19 @@ router.post('/login', async (req, res) => {
     }
   });
   
-  router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
-      req.session.destroy(() => {
-        res.status(204).end();
+
+
+  router.post('/register', async (req, res) => {
+    try{
+      const newUser = await Users.create({
+        ...req.body,
+         
       });
-    } else {
-      res.status(404).end();
+      
+      res.status(200).json({message: 'You are now logged in'});
+
+    } catch (err) {
+      res.status(500).json(err);
     }
   });
   

@@ -1,0 +1,187 @@
+html {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #334756;
+}
+
+body {
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+overflow-x: hidden;
+}
+
+nav {
+  background-color: #334756;
+}
+
+nav h1 {
+  margin: 0.67em .5em;
+}
+
+main {
+flex: 1 0 auto;
+}
+
+.container {
+margin: 0 auto 20px;
+}
+
+.greeting-message { 
+  position: relative; /* for child pseudo-element */
+  z-index: 0;
+  margin: 0 -600rem;
+  /* add back negative margin value */
+  padding: 0.25rem 600rem;
+  background: #ef5739;
+  color: #fff;
+}
+
+.greeting-message:before {
+  content: "";
+  position: absolute;
+  z-index: -1; /* behind parent */
+  top: 0;
+  bottom: 0;
+  /* subtract h2 padding (1.5rem) */
+  left: 598.5rem;
+  right: 598.5rem;
+  background: #FF4C29;
+}
+
+.btn, .btn-large, .btn-small {
+  background: #FF4C29;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #082032;
+}
+
+.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
+background-color: #082032;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+color: #FF4C29;
+}
+
+.main-games {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+}
+
+.flex-parent {
+color: #fff;
+}
+
+.flex-row {
+display: flex;
+}
+
+.login , .register {
+flex: 1 0 40%;
+margin: 0 10px;
+padding: 10px;
+color: #fff;
+
+}
+
+#left-nav {
+position: relative; /* for child pseudo-element */
+z-index: 0;
+margin: 0 -600rem;
+/* add back negative margin value */
+padding: 0.25rem 600rem;
+background: #fff;
+color: #000;
+border-bottom: 5px #082032 solid;
+}
+
+#left-nav:before {
+content: "";
+position: absolute;
+z-index: -1; /* behind parent */
+top: 0;
+bottom: 0;
+/* subtract h2 padding (1.5rem) */
+left: 598.5rem;
+right: 598.5rem;
+background: #fff;
+}
+
+.posts {
+background: #082032;
+padding: 10px;
+margin: 10px 0;
+}
+
+.posts h3 {
+margin-top: 0;
+}
+
+.sidenav{
+padding: 10px 5px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 375px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  flex: 1 0 40%;
+  margin: 10px 15px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #61738b;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    padding: 0 10%;
+}
+.page-footer {
+    /* margin-right: -100px; */
+  background-color: #082032;
+}
+
+@media only screen and (max-width: 768px){
+  .flip-card {
+    flex: 1 0 100% ;
+  }
+}

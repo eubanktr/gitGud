@@ -2,7 +2,7 @@
   "name": "gitGud",
   "version": "1.0.0",
   "description": "find other gamers to play with",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
@@ -11,6 +11,8 @@
     "express-handlebars": "^5.3.3",
     "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
+    "jshint": "^2.13.1",
+    "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
   },

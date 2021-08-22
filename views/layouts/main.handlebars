@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LFG</title>
+  <!--Import Google Icon Font-->
+  <link type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link type="text/css" rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+<body>
+  <header>
+  <nav>
+    <div class="nav-wrapper">
+      <h1 class="brand-logo">Welcome to GitGud!</h1>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <!-- Conditionally render login or logout links -->
+          <li><a href="/">Home</a></li>
+          {{#if logged_in}}
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/logout">Logout</a></li>
+          {{else}}
+          <li><a href="/login">Login/Register</a></li>
+          {{/if}}
+        </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <!-- Conditionally render login or logout links -->
+    <li><a href="/">Home</a></li>
+    {{#if logged_in}}
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/logout">Logout</a></li>
+    {{else}}
+    <li><a href="/login">Login/Register</a></li>
+    {{/if}}
+  </ul>
+  </header>
+    {{!-- <main> --}}
+      <!-- Render the sub layout -->
+    
+    <main class="container container-fluid mt-5">
+      {{{ body }}}
+    </main>
+    
+    {{!-- </main> --}}
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Canonically Get Good</h5>
+                <p class="grey-text text-lighten-4">We hope you can avoid all the lonely nights that we couldn't</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Our Dev Team:</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Tommy</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Carson</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Zachery</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Ren</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2021 Copyright
+            {{!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> --}}
+            </div>
+          </div>
+        </footer>
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+  <script src="/js/dropdown.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+
+</html>
