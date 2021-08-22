@@ -71,20 +71,14 @@
 <section class="flex-parent">
 
 <div class="posts-section">
-  <div class="posts post-1">
-    <h3>Title</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, harum. Porro minus expedita deserunt officiis aut eius illo repellat cum sapiente, aperiam a eaque enim harum exercitationem quae natus asperiores!</p>
+    {{#each posts}}
+      <div class="posts post-1">
+        <h3>{{author}}</h3>
+          <p>{{body}}</p>
   </div>
-
-  <div class="posts post-2">
-    <h3>Title</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, harum. Porro minus expedita deserunt officiis aut eius illo repellat cum sapiente, aperiam a eaque enim harum exercitationem quae natus asperiores!</p>
-  </div>
-
-  <div class="posts post-3">
-    <h3>Title</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, harum. Porro minus expedita deserunt officiis aut eius illo repellat cum sapiente, aperiam a eaque enim harum exercitationem quae natus asperiores!</p>
-  </div>
+    {{else}}
+    <p>no posts available</p>
+    {{/each}}
 
 </div>
 
