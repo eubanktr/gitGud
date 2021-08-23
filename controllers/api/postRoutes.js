@@ -3,7 +3,7 @@ const { Posts } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-  res.render('gamepage1');
+  res.render('posts');
 
   } catch (err) {
     res.status(500).json(err);
